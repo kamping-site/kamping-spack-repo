@@ -4,7 +4,6 @@
 
 from spack.package import *
 
-
 class Kassert(CMakePackage):
     """
     Powerful assertions made easy: Define assertion levels, get
@@ -20,11 +19,11 @@ class Kassert(CMakePackage):
 
     license("MIT", checked_by="niklas-uhl")
 
-    #version("0.1.0", sha256="cc666f3bb434c47074b6eee8c12984cc9b06030910ddce437ad188571642fb5c")
-    version("develop", branch="feature/cmake-dependencies")
+    version("0.2.0", sha256="e07db13bd079e5a2e8458046909b4553e2baa2b91f2ca091dd7385eb2405aab6")
+    version("develop", branch="main")
 
     depends_on("cxx", type="build")
     
     def cmake_args(self):
-        args = []
+        args = ["-DKASSERT_BUILD_TESTS=OFF", "-DKASSERT_BUILD_DOCS=OFF"]
         return args
