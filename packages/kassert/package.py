@@ -19,6 +19,7 @@ class Kassert(CMakePackage):
 
     license("MIT", checked_by="niklas-uhl")
 
+    version("0.2.1", sha256="319d0a55868cb0081cbc8b811857f2ef7c19a449fa77af16147a1ab69ba3d9c9")
     version("0.2.0", sha256="e07db13bd079e5a2e8458046909b4553e2baa2b91f2ca091dd7385eb2405aab6")
     version("develop", branch="main")
 
