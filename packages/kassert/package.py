@@ -23,6 +23,7 @@ class Kassert(CMakePackage):
     version("develop", branch="main")
 
     depends_on("cxx", type="build")
+    depends_on("cmake@3.14:", type="build")
     
     def cmake_args(self):
         args = ["-DKASSERT_BUILD_TESTS=OFF", "-DKASSERT_BUILD_DOCS=OFF"]
